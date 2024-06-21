@@ -26,52 +26,38 @@ def list_sahara_cars(destination_name: str) -> list:
 
         if afstandauto >= distance:
             cars.append(auto[1])
-        if cars == []:
-            cars.append("geen auto kan hier naartoe")
-
+    if cars == []:
+        cars.append("geen auto kan hier naartoe")
+    
+    print(cars)
     conn.close()
     return cars
 
  
  
 # code om de cars te selecteren die de afstand in één keer kunnen overbruggen
+verwachteresults = [['Toyota', 'Honda', 'Ford', 'Chevrolet', 'BMW', 'Audi', 'Mercedes-Benz', 'Volkswagen', 'Hyundai', 'Nissan'],[], ['Toyota', 'Honda', 'Chevrolet', 'BMW', 'Audi', 'Mercedes-Benz', 'Volkswagen', 'Hyundai', 'Nissan'], ["geen auto kan hier naartoe"],["geen auto kan hier naartoe"],["geen auto kan hier naartoe"], [], [], [], []]
 
-cars = list_sahara_cars('Tunis')
-for x in cars:
-    print(x)
 
-cars = list_sahara_cars('Dordrecht')
-for x in cars:
-    print(x)
+test1 = cars = list_sahara_cars('Tunis') == verwachteresults [0]
 
-cars = list_sahara_cars('Tripoli')
-for x in cars:
-    print(x)
+test2 = cars = list_sahara_cars('Dordrecht') == verwachteresults [1]
 
-cars = list_sahara_cars('Bamako')
-for x in cars:
-    print(x)
+test3 = cars = list_sahara_cars('Tripoli') == verwachteresults [2]
 
-cars = list_sahara_cars('Khartoum')
-for x in cars:
-    print(x)    
+test4 = cars = list_sahara_cars('Bamako')== verwachteresults [3]
 
-cars = list_sahara_cars('Cairo')
-for x in cars:
-    print(x)
+test5 = cars = list_sahara_cars('Khartoum') == verwachteresults [4]
+   
+test6 = cars = list_sahara_cars('Cairo') == verwachteresults [5]
 
-cars = list_sahara_cars('Tokyo ')
-for x in cars:
-    print(x)
+test7 = cars = list_sahara_cars('Tokyo ') == verwachteresults [6]
 
-cars = list_sahara_cars('Amsterdam')
-for x in cars:
-    print(x)
+test8 = cars = list_sahara_cars('Amsterdam') == verwachteresults [7]
 
-cars = list_sahara_cars('New york') 
-for x in cars:
-    print(x)
+test9 = cars = list_sahara_cars('New york') == verwachteresults [8]
 
-cars = list_sahara_cars('Antwerpen')
-for x in cars:
-    print(x)
+test10 = cars = list_sahara_cars('Antwerpen') == verwachteresults [9]
+
+
+print(test1, test2,test3,test4,test5,test6,test7,test8,test9,test10)
