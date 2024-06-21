@@ -1,6 +1,6 @@
 function kanBereikenTankstation(kilometersNaarTankstation, kilometersPerLiter, resterendeLiters) {
-    test = resterendeLiters * kilometersPerLiter 
-    if (test >= kilometersNaarTankstation)
+    kmgereden = resterendeLiters * kilometersPerLiter 
+    if (kmgereden >= kilometersNaarTankstation)
     return true;
 
     else
